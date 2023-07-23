@@ -1,3 +1,5 @@
+// File untuk keperluan testing(test ataupun benchmark) dipisah dengan file utama, namanya harus berakhiran _test.go, dan package-nya harus sama
+// go test 58_UnitTest.go 58_UnitTest_testify_test.go -v
 package main
 
 import (
@@ -9,7 +11,10 @@ var (
 	kubus              Kubus   = Kubus{4}
 	volumeSeharusnya   float64 = 64
 	luasSeharusnya     float64 = 96
-	kelilingSeharusnya float64 = 48
+	// Asli
+	// KelilingSeharusnya float64 = 48
+	// Test munculkan pesan error
+	kelilingSeharusnya float64 = 60
 )
 
 func TestHitungVolume(t *testing.T) {

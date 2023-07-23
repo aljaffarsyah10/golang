@@ -5,6 +5,7 @@ import (
     "fmt"
     "log"
     // "time"
+    "strings"
 
     "go.mongodb.org/mongo-driver/mongo"
     "go.mongodb.org/mongo-driver/mongo/options"
@@ -117,46 +118,54 @@ func remove() {
 }
 
 // Aggregate Data
-// pipeline := make([]bson.M, 0)
-// err = bson.UnmarshalExtJSON([]byte(strings.TrimSpace(`
-//     [
-//         { "$group": {
-//             "_id": null,
-//             "Total": { "$sum": 1 }
-//         } },
-//         { "$project": {
-//             "Total": 1,
-//             "_id": 0
-//         } }
-//     ]
-// `)), true, &pipeline)
-// if err != nil {
-//     log.Fatal(err.Error())
-// }
-// csr, err := db.Collection("student").Aggregate(ctx, pipeline)
-// if err != nil {
-//     log.Fatal(err.Error())
-// }
-// defer csr.Close(ctx)
+func aggregate() {
+    pipeline := make([]bson.M, 0)
+    db, err2 := connect()
+    err := bson.UnmarshalExtJSON([]byte(strings.TrimSpace(`
+        [
+            { "$group": {
+                "_id": null,
+                "Total": { "$sum": 1 }
+            } },
+            { "$project": {
+                "Total": 1,
+                "_id": 0
+            } }
+        ]
+    `)), true, &pipeline)
+    if err != nil {
+        log.Fatal(err.Error())
+    }
+    if err2 != nil {
+        log.Fatal(err.Error())
+    }
 
-// result := make([]bson.M, 0)
-// for csr.Next(ctx) {
-//     var row bson.M
-//     err := csr.Decode(&row)
-//     if err != nil {
-//         log.Fatal(err.Error())
-//     }
+    csr, err := db.Collection("student").Aggregate(ctx, pipeline)
+    if err != nil {
+        log.Fatal(err.Error())
+    }
+    defer csr.Close(ctx)
 
-//     result = append(result, row)
-// }
+    result := make([]bson.M, 0)
+    for csr.Next(ctx) {
+        var row bson.M
+        err := csr.Decode(&row)
+        if err != nil {
+            log.Fatal(err.Error())
+        }
 
-// if len(result) > 0 {
-//     fmt.Println("Total :", result[0]["Total"])
-// }
+        result = append(result, row)
+}
+
+if len(result) > 0 {
+    fmt.Println("Total :", result[0]["Total"])
+}
+}
 
 func main() {
     insert()
     find()
     update()
+    aggregate()
     remove()
 }

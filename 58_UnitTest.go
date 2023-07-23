@@ -1,3 +1,4 @@
+// File untuk keperluan testing(test ataupun benchmark) dipisah dengan file utama, namanya harus berakhiran _test.go, dan package-nya harus sama
 package main
 
 import "math"

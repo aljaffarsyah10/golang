@@ -1,3 +1,5 @@
+// File untuk keperluan testing(test ataupun benchmark) dipisah dengan file utama, namanya harus berakhiran _test.go, dan package-nya harus sama
+// go test 58_UnitTest.go 58_UnitTest_test.go -v
 package main
 
 import "testing"
