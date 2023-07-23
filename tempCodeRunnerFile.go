@@ -1,12 +1,7 @@
-Before sync.Mutex
-type counter struct {
-    val int
-}
-
-func (c *counter) Add(int) {
-    c.val++
-}
-
-func (c *counter) Value() (int) {
-    return c.val
-}
+func Sum(numbers []int) int {
+//     var total int
+//     for _, e := range numbers {
+//         total += e
+//     }
+//     return total
+// }
