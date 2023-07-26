@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <title>Learning html/template Functions</title>
+  </head>
+  <body>
+    {{unescape "<!-- this is comment -->"}} {{unescape "
+    <h2>"}} {{avg 8 9 8 6 7 8 8}} {{"</h2>
+    " | unescape}}
+  </body>
+</html>
+
+<!-- Fungsi unescape(), digunakan untuk menampilkan string tanpa di-escape
+Fungsi avg(), digunakan untuk mencari rata-rata dari angka-angka yang disisipkan sebagai parameter -->
