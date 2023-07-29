@@ -1,11 +1,11 @@
 package main
 
 import (
-	"ioutil"
-    "log"
+	"log"
     "net/http"
     "strings"
     "time"
+	// "io/ioutil"
 )
 
 func handleIndex(w http.ResponseWriter, r *http.Request) {
@@ -13,17 +13,17 @@ func handleIndex(w http.ResponseWriter, r *http.Request) {
 	go func() {
 		// do the process here
 		// simulate a long-time request by putting 10 seconds sleep
-		// time.Sleep(10 * time.Second)
-	
-		// done <- true
-
-		// Handle Cancelled Request yang ada Payload-nya
-		body, err := ioutil.ReadAll(r.Body)
-		// ...
-	
 		time.Sleep(10 * time.Second)
 	
 		done <- true
+
+		// Handle Cancelled Request yang ada Payload-nya
+		// body, err := ioutil.ReadAll(r.Body)
+		// ...
+	
+		// time.Sleep(10 * time.Second)
+	
+		// done <- true
 	}()
 	
 	select {

@@ -1,0 +1,32 @@
+===Web Framework
+Beego
+Echo
+Gin
+custom, menggunakan kombinasi dari banyak library sesuai kebutuhan dan selera.
+atau bisa menggunakan pilihan alternatif web framework lainnya.
+atau bisa juga menggunakan salah satu web framework dan di-combine dengan library lain.
+Untuk opsi custom framework sendiri, pembaca bisa menggunakan kombinasi dari beberapa library berikut:
+
+===Routing Library
+Chi
+FastHttp atau FastHttpRouter
+Gorilla Mux
+dan lainnya
+
+===HTTP Middlewares
+Untuk middlewares biasanya include sebagai dependensi router library. Tapi ada juga middleware independen. Contohnya:
+CORS
+JWT
+Rate Limiter
+Secure
+dan lainnya
+
+===Form & Validator
+Validator library berfungsi untuk mempermudah parsing payload dan parameter dari objek http request. Rekomendasi validator library salah satunya:
+Validator by go-playground
+dan lainnya
+
+===Database / ORM
+Gorm
+Gorp
+dan lainnya
