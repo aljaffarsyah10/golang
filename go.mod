@@ -3,6 +3,8 @@ module hello-world
 go 1.20
 
 require (
+	github.com/360EntSecGroup-Skylar/excelize v1.4.1 // indirect
+	github.com/NYTimes/gziphandler v1.1.1 // indirect
 	github.com/antonlindstrom/pgstore v0.0.0-20220421113606-e3a6e3fed12a // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible // indirect
@@ -18,6 +20,7 @@ require (
 	github.com/gorilla/securecookie v1.1.1 // indirect
 	github.com/gorilla/sessions v1.2.1 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
+	github.com/jung-kurt/gofpdf v1.16.2 // indirect
 	github.com/kidstuff/mongostore v0.0.0-20181113001930-e650cd85ee4b // indirect
 	github.com/klauspost/compress v1.13.6 // indirect
 	github.com/labstack/echo v3.3.10+incompatible // indirect
@@ -28,6 +31,7 @@ require (
 	github.com/mattn/go-colorable v0.1.12 // indirect
 	github.com/mattn/go-isatty v0.0.14 // indirect
 	github.com/mitchellh/mapstructure v1.5.0 // indirect
+	github.com/mohae/deepcopy v0.0.0-20170929034955-c48cc78d4826 // indirect
 	github.com/montanaflynn/stats v0.0.0-20171201202039-1bf9dbcd8cbe // indirect
 	github.com/novalagung/gubrak/v2 v2.0.1 // indirect
 	github.com/pelletier/go-toml/v2 v2.0.8 // indirect
@@ -41,6 +45,7 @@ require (
 	github.com/stretchr/objx v0.5.0 // indirect
 	github.com/stretchr/testify v1.8.4 // indirect
 	github.com/subosito/gotenv v1.4.2 // indirect
+	github.com/unrolled/secure v1.13.0 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasttemplate v1.2.1 // indirect
 	github.com/xdg-go/pbkdf2 v1.0.0 // indirect
@@ -53,6 +58,8 @@ require (
 	golang.org/x/sync v0.1.0 // indirect
 	golang.org/x/sys v0.8.0 // indirect
 	golang.org/x/text v0.9.0 // indirect
+	gopkg.in/alexcesaro/quotedprintable.v3 v3.0.0-20150716171945-2caba252f4dc // indirect
+	gopkg.in/gomail.v2 v2.0.0-20160411212932-81ebce5c23df // indirect
 	gopkg.in/ini.v1 v1.67.0 // indirect
 	gopkg.in/mgo.v2 v2.0.0-20190816093944-a6b53ec6cb22 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
