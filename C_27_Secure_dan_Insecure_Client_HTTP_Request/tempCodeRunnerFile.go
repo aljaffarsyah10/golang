@@ -1,0 +1,1 @@
+curl -X POST https://localhost/data --insecure -H 'Content-Type: application/json' -d '{"Name": "Noval Agung"}'
