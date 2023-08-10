@@ -10,7 +10,7 @@ import f "fmt"
 
 
 func main(){
-    // library.SayHello("ethan")
+    // library.SayHello(cd"ethan")
     SayHello("ethan")
 
 	// var s1 = library.Student{"ethan", 21}
